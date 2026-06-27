@@ -1,22 +1,22 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import SearchSection from "./components/SearchSection";
-import HowItWorks from "./components/HowItWorks";
-import FeaturedTickets from "./components/FeaturedTickets";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import SellTicket from "./pages/SellTicket";
+import BuyTicket from "./pages/BuyTicket";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+
 function App() {
   return (
-
-  <>
-  <Navbar />
-  <Hero />
-  <SearchSection/>
-  <HowItWorks />
-  <FeaturedTickets />
-
-</>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/sell" element={<SellTicket />} />
+      <Route path="/buy" element={<BuyTicket />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
   );
-  
 }
 
 export default App;
