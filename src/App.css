@@ -124,3 +124,36 @@ body{
     cursor:pointer;
     font-size:16px;
 }
+.how-it-works{
+    padding:80px 50px;
+    background:#f8f9fa;
+    text-align:center;
+}
+
+.how-it-works h2{
+    color:#1e3a8a;
+    margin-bottom:50px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.step-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.step-card:hover{
+    transform:translateY(-8px);
+}
+
+.step-card h3{
+    margin-bottom:15px;
+    color:#2563eb;
+}
