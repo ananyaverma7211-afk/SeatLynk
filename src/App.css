@@ -157,3 +157,51 @@ body{
     margin-bottom:15px;
     color:#2563eb;
 }
+.featured-section{
+    padding:80px 50px;
+    text-align:center;
+}
+
+.featured-section h2{
+    color:#1e3a8a;
+    margin-bottom:40px;
+}
+
+.ticket-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.ticket-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:left;
+    transition:.3s;
+}
+
+.ticket-card:hover{
+    transform:translateY(-8px);
+}
+
+.ticket-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.ticket-card p{
+    margin:8px 0;
+}
+
+.ticket-card button{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}

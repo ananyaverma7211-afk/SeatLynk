@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import SearchSection from "./components/SearchSection";
 import HowItWorks from "./components/HowItWorks";
+import FeaturedTickets from "./components/FeaturedTickets";
 function App() {
   return (
 
@@ -11,7 +12,7 @@ function App() {
   <Hero />
   <SearchSection/>
   <HowItWorks />
-
+  <FeaturedTickets />
 
 </>
   );
