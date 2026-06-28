@@ -1,16 +1,25 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar">
       <h2 className="logo">🚆 RailSwap</h2>
 
       <ul className="nav-links">
-        <li>Home</li>
-        <li>Buy Ticket</li>
-        <li>Sell Ticket</li>
-        <li>About</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/buy">Buy Ticket</Link></li>
+        <li><Link to="/sell">Sell Ticket</Link></li>
       </ul>
 
-      <button className="login-btn">Login</button>
+      <div className="nav-buttons">
+        <Link to="/login">
+          <button className="login-btn">Login</button>
+        </Link>
+
+        <Link to="/register">
+          <button className="register-btn">Register</button>
+        </Link>
+      </div>
     </nav>
   );
 }
