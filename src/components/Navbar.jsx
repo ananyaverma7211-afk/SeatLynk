@@ -9,6 +9,7 @@ function Navbar() {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/buy">Buy Ticket</Link></li>
         <li><Link to="/sell">Sell Ticket</Link></li>
+        <li><Link to="/about">About</Link></li>
       </ul>
 
       <div className="nav-buttons">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 function BuyTicket() {
@@ -46,6 +47,11 @@ useEffect(() => {
 />
 
         <div className="ticket-grid">
+            {tickets.length === 0 && (
+ <h2 className="no-ticket">
+  No Tickets Available 🚆
+</h2>
+)}
           {tickets
   .filter((ticket) =>
     ticket.trainName.toLowerCase().includes(search.toLowerCase()) ||
@@ -75,7 +81,16 @@ useEffect(() => {
 >
   View Details
 </button>
-              <button>Buy Ticket</button>
+              <button
+  onClick={() =>
+    alert(
+      `Booking request sent!\n\nContact Seller:\n📞 ${ticket.phone}\n📧 ${ticket.email}`
+    )
+  }
+>
+  Buy Ticket
+  </button>
+
               <button
   className="delete-btn"
   onClick={() => handleDelete(ticket.pnr)}
@@ -118,6 +133,7 @@ useEffect(() => {
   </div>
 )}
       </section>
+      <Footer />
     </>
   );
 }

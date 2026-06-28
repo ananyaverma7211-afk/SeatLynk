@@ -541,3 +541,121 @@ padding:25px;
   color: white;
   cursor: pointer;
 }
+/* No Ticket Message */
+.no-ticket{
+  width:100%;
+  text-align:center;
+  margin:40px 0;
+  padding:25px;
+  font-size:24px;
+  font-weight:bold;
+  color:#1e3a8a;
+  background:#eef4ff;
+  border:2px dashed #1e3a8a;
+  border-radius:12px;
+}
+
+/* Buy Ticket Button */
+.buy-card button{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* View Details */
+.details-btn{
+  background:#2563eb;
+  color:white;
+}
+
+/* Buy Button */
+.buy-card button:not(.details-btn):not(.delete-btn){
+  background:#16a34a;
+  color:white;
+}
+
+/* Delete */
+.delete-btn{
+  background:#dc2626;
+  color:white;
+}
+
+.details-btn:hover{
+  background:#1d4ed8;
+}
+
+.buy-card button:not(.details-btn):not(.delete-btn):hover{
+  background:#15803d;
+}
+
+.delete-btn:hover{
+  background:#b91c1c;
+}
+/* Footer */
+
+.footer{
+  background:#1e3a8a;
+  color:white;
+  text-align:center;
+  padding:18px;
+  margin-top:40px;
+  font-size:15px;
+}
+.about-page{
+  max-width:900px;
+  margin:40px auto;
+  padding:30px;
+  background:white;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.about-page h1{
+  color:#1e3a8a;
+  margin-bottom:20px;
+}
+
+.about-page h2{
+  margin-top:25px;
+  color:#2563eb;
+}
+
+.about-page ul{
+  margin-left:20px;
+}
+
+.about-page li{
+  margin:10px 0;
+}
+@media (max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    flex-direction:column;
+    text-align:center;
+}
+
+.nav-buttons{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.ticket-grid{
+    grid-template-columns:1fr;
+}
+
+.form-card{
+    width:95%;
+}
+
+}
