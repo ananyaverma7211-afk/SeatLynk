@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
+
 import Navbar from "../components/Navbar";
 
+
 function BuyTicket() {
+   
    const [tickets, setTickets] = useState([]);
+    const [selectedTicket, setSelectedTicket] = useState(null);
 
 useEffect(() => {
   const savedTickets =
     JSON.parse(localStorage.getItem("tickets")) || [];
+    console.log("Saved Tickets:", savedTickets);
 
   setTickets(savedTickets);
 }, []);
@@ -63,7 +68,13 @@ useEffect(() => {
 <p><strong>Passenger:</strong> {ticket.passengerName}</p>
 
 <h2>₹{ticket.sellingPrice}</h2>
-
+ 
+<button
+  className="details-btn"
+  onClick={() => setSelectedTicket(ticket)}
+>
+  View Details
+</button>
               <button>Buy Ticket</button>
               <button
   className="delete-btn"
@@ -74,6 +85,38 @@ useEffect(() => {
             </div>
           ))}
         </div>
+        {selectedTicket && (
+  <div className="modal-overlay">
+    <div className="modal">
+
+      <h2>🚆 Ticket Details</h2>
+
+      <p><strong>Passenger:</strong> {selectedTicket.passengerName}</p>
+      <p><strong>PNR:</strong> {selectedTicket.pnr}</p>
+      <p><strong>Train No:</strong> {selectedTicket.trainNumber}</p>
+      <p><strong>Train:</strong> {selectedTicket.trainName}</p>
+      <p><strong>From:</strong> {selectedTicket.from}</p>
+      <p><strong>To:</strong> {selectedTicket.to}</p>
+      <p><strong>Date:</strong> {selectedTicket.date}</p>
+      <p><strong>Class:</strong> {selectedTicket.travelClass}</p>
+      <p><strong>Seat:</strong> {selectedTicket.seatNumber}</p>
+      <p><strong>Status:</strong> {selectedTicket.status}</p>
+      <p><strong>Phone:</strong> {selectedTicket.phone}</p>
+      <p><strong>Email:</strong> {selectedTicket.email}</p>
+      <p><strong>Original Price:</strong> ₹{selectedTicket.originalPrice}</p>
+      <p><strong>Selling Price:</strong> ₹{selectedTicket.sellingPrice}</p>
+      <p><strong>Reason:</strong> {selectedTicket.reason}</p>
+
+      <button
+        className="close-btn"
+        onClick={() => setSelectedTicket(null)}
+      >
+        Close
+      </button>
+
+    </div>
+  </div>
+)}
       </section>
     </>
   );
