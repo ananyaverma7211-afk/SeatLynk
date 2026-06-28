@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section className="hero">
@@ -11,9 +12,14 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="sell-btn">Sell Ticket</button>
-          <button className="buy-btn">Buy Ticket</button>
-        </div>
+  <Link to="/sell">
+    <button className="sell-btn">Sell Ticket</button>
+  </Link>
+
+  <Link to="/buy">
+    <button className="buy-btn">Buy Ticket</button>
+  </Link>
+</div>
       </div>
     </section>
   );

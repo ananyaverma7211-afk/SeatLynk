@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 
 function BuyTicket() {
+    const location = useLocation();
+
+const query = new URLSearchParams(location.search);
+
+const fromQuery = query.get("from") || "";
+const toQuery = query.get("to") || "";
+const dateQuery = query.get("date") || "";
    
    const [tickets, setTickets] = useState([]);
     const [selectedTicket, setSelectedTicket] = useState(null);
@@ -16,7 +24,9 @@ useEffect(() => {
 
   setTickets(savedTickets);
 }, []);
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState(
+  `${fromQuery} ${toQuery}`.trim()
+);
     const handleDelete = (pnr) => {
   const updatedTickets = tickets.filter(
     (ticket) => ticket.pnr !== pnr
@@ -53,11 +63,17 @@ useEffect(() => {
 </h2>
 )}
           {tickets
-  .filter((ticket) =>
+ .filter((ticket) => {
+  const matchesSearch =
     ticket.trainName.toLowerCase().includes(search.toLowerCase()) ||
     ticket.from.toLowerCase().includes(search.toLowerCase()) ||
-    ticket.to.toLowerCase().includes(search.toLowerCase())
-  )
+    ticket.to.toLowerCase().includes(search.toLowerCase());
+
+  const matchesDate =
+    dateQuery === "" || ticket.date === dateQuery;
+
+  return matchesSearch && matchesDate;
+})
   .map((ticket) => (
             <div className="buy-card" key={ticket.pnr}>
               <span className="badge">{ticket.status}</span>

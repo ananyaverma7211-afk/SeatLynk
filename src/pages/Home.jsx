@@ -1,16 +1,17 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import SearchSection from "../components/SearchSection";
+import Dashboard from "../components/Dashboard";
 import HowItWorks from "../components/HowItWorks";
 import FeaturedTickets from "../components/FeaturedTickets";
 import Footer from "../components/Footer";
+
 
 function Home() {
   return (
     <>
       <Navbar />
       <Hero />
-      <SearchSection />
+      <Dashboard />
       <HowItWorks />
       <FeaturedTickets />
       <Footer />

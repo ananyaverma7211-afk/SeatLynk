@@ -258,14 +258,14 @@ body{
 
 .form-card h1{
     color:#2563eb;
-    margin-bottom:10px;
+    margin-bottom:18px;
     text-align:center;
 }
 
 .form-card p{
     text-align:center;
     color:#666;
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
 .sell-form{
@@ -658,4 +658,138 @@ padding:25px;
     width:95%;
 }
 
+}
+.dashboard{
+    padding:60px 10%;
+    text-align:center;
+}
+
+.dashboard h2{
+    margin-bottom:30px;
+    color:#1e3a8a;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card h1{
+    color:#2563eb;
+    font-size:42px;
+    margin-top:10px;
+}
+/* Dark Mode */
+
+.theme-btn{
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin-left:10px;
+}
+
+body.dark{
+    background:#111827;
+    color:white;
+}
+
+body.dark .navbar{
+    background:#1f2937;
+}
+
+body.dark .buy-card,
+body.dark .form-card,
+body.dark .stat-card,
+body.dark .about-page,
+body.dark .modal{
+    background:#1f2937;
+    color:white;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+    background:#374151;
+    color:white;
+    border:1px solid #555;
+}
+
+body.dark .footer{
+    background:#111827;
+}
+*{
+    transition: all 0.3s ease;
+}
+.register-page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+    min-height:80vh;
+}
+
+.register-card{
+    width:100%;
+    max-width:500px;
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.register-card h1{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:18px;
+    font-size:32px;
+    line-height:1.3;
+}
+
+.register-card p{
+    text-align:center;
+    margin-bottom:30px;
+    color:#666;
+    line-height:1.6;
+}
+
+.checkbox{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:20px 0;
+    font-size:14px;
+}
+
+.login-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.login-link a{
+    color:#2563eb;
+    font-weight:600;
+    text-decoration:none;
+}
+.hero-buttons a{
+    text-decoration: none;
+}
+.welcome-user{
+    color:white;
+    font-weight:600;
+    margin-right:15px;
+    font-size:15px;
 }
