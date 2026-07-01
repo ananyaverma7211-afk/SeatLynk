@@ -1,7 +1,7 @@
 function HowItWorks() {
   return (
     <section className="how-it-works">
-      <h2>How RailSwap Works</h2>
+      <h2>How SeatLynk Works</h2>
 
       <div className="steps">
 
@@ -12,7 +12,7 @@ function HowItWorks() {
 
         <div className="step-card">
           <h3>2️⃣ Verification</h3>
-          <p>RailSwap verifies ticket details before listing.</p>
+          <p>SeatLynk verifies ticket details before listing.</p>
         </div>
 
         <div className="step-card">

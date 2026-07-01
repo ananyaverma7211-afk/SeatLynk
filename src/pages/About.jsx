@@ -7,10 +7,10 @@ function About() {
       <Navbar />
 
       <div className="about-page">
-        <h1>About RailSwap 🚆</h1>
+        <h1>About SeatLynk 🚆</h1>
 
         <p>
-          RailSwap is a railway ticket resale platform where users can securely
+          SeatLynk is a railway ticket resale platform where users can securely
           list unused train tickets and find tickets from other passengers.
         </p>
 

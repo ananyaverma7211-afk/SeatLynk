@@ -24,7 +24,7 @@ function Dashboard() {
 
   return (
     <section className="dashboard">
-      <h2>📊 RailSwap Statistics</h2>
+      <h2>📊 SeatLynk Statistics</h2>
 
       <div className="dashboard-grid">
 

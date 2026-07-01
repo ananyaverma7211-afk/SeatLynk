@@ -37,7 +37,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-              <h2 className="logo">🚆 RailSwap</h2>
+              <h2 className="logo">🚆 SeatLynk</h2>
 
       <ul className="nav-links">
         <li>

@@ -4,7 +4,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <h1>Don't Cancel Your Ticket.</h1>
-        <h1>Sell It on RailSwap.</h1>
+        <h1>Sell It on SeatLynk.</h1>
 
         <p>
           Connect with verified travelers and recover your ticket cost
